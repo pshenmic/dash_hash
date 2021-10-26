@@ -1,6 +1,13 @@
+#define PY_SSIZE_T_CLEAN
 #include <Python.h>
 
 #include "dash.h"
+
+#if PY_MAJOR_VERSION >= 3 || PY_MAJOR_VERSION == 3 && PY_MINOR_VERSION >= 7
+#define SIZE_ARG_TYPE Py_ssize_t
+#else
+#define SIZE_ARG_TYPE int
+#endif
 
 static PyObject *dash_getpowhash(PyObject *self, PyObject *args)
 {
@@ -23,7 +30,7 @@ static PyObject *dash_getpowhash(PyObject *self, PyObject *args)
 #endif
     Py_DECREF(input);
 #if PY_MAJOR_VERSION >= 3
-    value = Py_BuildValue("y#", output, 32);
+    value = Py_BuildValue("y#", output, (SIZE_ARG_TYPE)32);
 #else
     value = Py_BuildValue("s#", output, 32);
 #endif
