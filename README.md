@@ -7,7 +7,7 @@ Python module for Dash's X11 hashing.
 Install
 -------
 
-Python 2.7+ or 3.5+ is required as well as a gcc.
+Python 2.7+ or 3.5+ and the associated development package (e.g., `python2-dev`) is required as well as a gcc.
 
     $ sudo python setup.py install
 
