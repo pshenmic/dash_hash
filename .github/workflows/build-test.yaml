@@ -16,5 +16,6 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: |
-          python setup.py install
+          python -m pip install -r requirements.txt .
           python test.py
+          yes | python -m pip uninstall dash-hash

@@ -1,4 +1,4 @@
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 dash_hash_module = Extension('dash_hash',
                                  sources = ['dashmodule.c',
