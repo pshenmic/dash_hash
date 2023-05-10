@@ -1,4 +1,4 @@
-from distutils.core import setup, Extension
+from setuptools import setup, Extension
 
 dash_hash_module = Extension('dash_hash',
                                  sources = ['dashmodule.c',
@@ -17,6 +17,6 @@ dash_hash_module = Extension('dash_hash',
                                include_dirs=['.', './sha3'])
 
 setup (name = 'dash_hash',
-       version = '1.3.2',
+       version = '1.4.0',
        description = 'Binding for Dash X11 proof of work hashing.',
        ext_modules = [dash_hash_module])
