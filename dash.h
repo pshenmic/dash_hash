@@ -1,6 +1,8 @@
 #ifndef DASH_H
 #define DASH_H
 
+#define PY_SSIZE_T_CLEAN
+
 #ifdef __cplusplus
 extern "C" {
 #endif
