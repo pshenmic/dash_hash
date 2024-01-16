@@ -1,4 +1,4 @@
-dash_hash (python) v1.4.0
+dash_hash (python) v1.5.1
 ===========================
 
 Python module for Dash's X11 hashing.

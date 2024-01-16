@@ -17,6 +17,6 @@ dash_hash_module = Extension('dash_hash',
                                include_dirs=['.', './sha3'])
 
 setup (name = 'dash_hash',
-       version = '1.4.0',
+       version = '1.5.1',
        description = 'Binding for Dash X11 proof of work hashing.',
        ext_modules = [dash_hash_module])
